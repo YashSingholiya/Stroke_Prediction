@@ -1,0 +1,325 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/chalkduster');
+    </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="description" content="Project page for 'Stroke Prediction'">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="description" content="Project page for 'Stroke Prediction'">
+    
+    
+          <meta charset="utf-8">
+          <meta name="description" content="Stroke Prediction">
+          <meta name="keywords" content="Stroke Prediction, K-Nearest Neighbors (KNN), Logistic Regression, Naive Bayes, Decision Tree Classifier, Healthcare Analytics, Preventive Diagnosis">
+          <meta name="author" content="Yash Singholiya">
+          <title>Stroke Prediction</title>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    
+    <body>
+        <p class="title">Stroke Prediction</p>
+        
+        <p class="author">
+            <span class="author">Yash Singholiya</a>&nbsp;<sup>1</sup></span>
+            <span class="author">Sunny Kumar</a>&nbsp;<sup>2</sup></span>
+            <span class="author">Bhatt Nidhish Hiteshbhai</a>&nbsp;<sup>3</sup></span>
+            <span class="author">Gaurav Subhash Vishwe</a>&nbsp;<sup>4</sup></span>
+            <span class="author">Banavath Chandra Mouli Naik</a>&nbsp;<sup>5</sup></span>
+        </p>
+
+        <br>
+
+        <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td align="center">| <a href="https://github.com/YashSingholiya/Stroke_Prediction/tree/main/Dataset">Dataset</a> | <a href="https://github.com/YashSingholiya/Stroke_Prediction">GitHub</a> | <a href="https://drive.google.com/file/d/11RGwQ5BXFuh7kwRW2_cEo1Mito5s-59K/view?usp=sharing">Report</a> | <a href="https://drive.google.com/file/d/1Zg5G1_3zQ6LxQSRjnXDOFdgKOE4mgj7n/view?usp=drive_link">Slides</a> | <a href="./resources/CSTBIR-AAAI24Slides.pdf">Web Demo</a> | <a href="#" class="scrollToSection" data-target="#videoSection">Video</a>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="container">
+            <div style="text-align: justify;text-justify: inter-word;">
+            <p><span class="section"><b>Abstract</b></span> </p>
+            <p>Stroke remains one of the leading causes of mortality worldwide, accounting for nearly 11% of all deaths. Early detection and prevention are crucial in mitigating its impact. This project presents a comprehensive stroke prediction system that leverages multiple machine learning models to identify individuals at high risk of stroke based on health and lifestyle parameters. The system is built using a real-world healthcare dataset containing patient attributes such as age, gender, hypertension, heart disease, marital status, work type, residence, average glucose level, BMI, and smoking status.</p>
+            <p>To enhance prediction accuracy and robustness, we implemented and compared the performance of several machine learning algorithms, including K-Nearest Neighbors (KNN), Logistic Regression, Naive Bayes, and Decision Tree Classifier. These models were evaluated using various performance metrics such as accuracy, precision, recall, and F1-score. To address the challenges of class imbalance, we employed techniques such as class weighting.</p>
+            <p>Furthermore, dimensionality reduction techniques were explored to improve model performance and training efficiency. Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) were used to reduce feature space while preserving essential variance and class-separating information, respectively. The impact of these techniques was analyzed by comparing model accuracy before and after transformation.</p>
+            <p>Our findings highlight the effectiveness of combining classical machine learning models with dimensionality reduction strategies for early stroke prediction. The project underscores the potential of data-driven approaches in supporting preventive healthcare and aiding timely medical intervention for stroke-prone individuals.</p>
+            </div>
+            <div style="text-align: justify;text-justify: inter-word;">
+                <p><b>Keywords:</b></p>
+                    <ul>
+                    <li>Stroke Prediction</li>
+                    <li>K-Nearest Neighbors (KNN)</li>
+                    <li>Logistic Regression</li>
+                    <li>Naive Bayes</li>
+                    <li>Decision Tree Classifier</li>
+                    <li>Healthcare Analytics</li>
+                    <li>Preventive Diagnosis</li>
+                    </ul>
+            </div>
+            <p class="section">&nbsp;</p>
+    
+            <p class="section">&nbsp;</p>
+            <p class="section"><b>Performance Metrics of Different Models</b></p>
+            <table id="metricsTable">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Metrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>KNN</td>
+                        <td>RMSE: 2.912<br>MAE: 2.647<br>MAPE: 75.43%</td>
+                    </tr>
+                    <tr>
+                        <td>SVM</td>
+                        <td>MSE: 0.04<br>MAE: 0.20<br>R2 Score: 0.836</td>
+                    </tr>
+                    <tr>
+                        <td>GMM</td>
+                        <td>RMSE: 3.35<br>Best Parameters: covariance_type: full, n_components: 5<br>RMSE Percentage: 74.40%<br>Confidence Scores (in percentage): [91.13075468 97.4685502 97.03453028 ... 99.99366554 95.06600285 96.78346216]</td>
+                    </tr>
+                    <tr>
+                        <td>ANN</td>
+                        <td>Precision: 0.8<br>Recall: 1.0<br>MAE: 0.37</td>
+                    </tr>
+                    <tr>
+                        <td>Linear Regression</td>
+                        <td>RMSE: 1.05<br>MAE: 0.84<br>MAPE: 38.21%</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <br>
+            <!-- <p class="section"><b>Outputs</b></p>
+            <div style="text-align: center">
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="flex-basis: 22%;">
+                    </div>
+                    <div style="flex-basis: 45%; margin-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between;">
+                        </div>
+                    </div>
+                    <div style="flex-basis: 22%;">
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="flex-basis: 22%; border: 1px solid black;">
+                        <img src="res/knnm.png" alt="" width="100%" style="margin: auto">
+                        <p><b>MovieName as Input(KNN)</b></p>
+                    </div>
+                    <div style="flex-basis: 22%; border: 1px solid black;">
+                        <img src="res/knnu.png" alt="" width="100%" style="margin: auto">
+                        <img src="res/svm.png" alt="" width="48%" style="margin: auto">
+                        <p><b>UserID as Input(SVR and KNN)</b></p>
+                    </div>
+                    <div style="flex-basis: 22%; border: 1px solid black;">
+                        <img src="res/ann.png" alt="" width="100%" style="margin: auto">
+                        <p><b>Feedback-Based Output(ANN).</b></p>
+                    </div>
+                </div>
+            </div> -->
+            
+<p class="section">&nbsp;</p>
+
+    
+        <div id="videoSection">
+            <p class="section"><b>Video Demo of Project:</b></p>
+            <center>
+                <!-- <iframe width="1000" height="600" src="https://www.youtube.com/embed/D73zJuKNLNc"></iframe> -->
+            </center>
+        </div>
+    </centre>
+    <br>
+            <div class="team">
+                <p class="section" id="team"><b>Team Members</b></p>
+                <div class="row justify-content-center">
+            
+                    <!-- Person 1 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="img/ys.jpg" alt="ys"></p>
+                                    <h6 class="card-title">Yash <br> Singholiya</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/yashsingholiya12/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/YashSingholiya">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Person 2 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="img/sk.jpg" alt="sk"></p>
+                                    <h6 class="card-title">Sunny <br> Kumar<br></h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/sunny-kumar-604180280/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/sunny40540">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Person 3 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="img/nb.jpg" alt="nb"></p>
+                                    <h6 class="card-title">Bhatt Nidhish <br> Hiteshbhai<br></h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/nidhish-bhatt-a590a8253/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/Nidhish333">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Person 4 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="img/gv.jpg" alt="gv"></p>
+                                    <h6 class="card-title">Gaurav Subhash<br> Vishwe</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/gaurav-vishwe-679530209/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/Gauravsubhashvishwe">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Person 5 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="img/cm.jpg" alt="cm"></p>
+                                    <h6 class="card-title">Banavath Chandra<br>Mouli Naik</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/chandra-mouli-naik-1106892a2/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/Chandramoulinaik">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         </div>
+            <p class="section">&nbsp;</p>
+    
+            <div class="ack"> <p class="section" id="ack"><b>Acknowledgement</b></p> <p>We would like to express our sincere gratitude to our course instructor, <b>Anand Mishra</b> for his invaluable guidance, support and feedback throughout this project. His expertise and insights were instrumental in shaping our understanding of machine learning concepts and their practical applications in the healthcare domain.</p> <p>We would also like to extend our appreciation to the open-source community for their contributions in developing and maintaining the libraries and datasets that were crucial for the implementation
+                and analysis of our stroke prediction project. Specifically, we acknowledge the use of <a href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"><b>Stroke Prediction Dataset</b></a> in our project.</p> <p>Furthermore, we would like to thank our peers and colleagues for their constructive discussions, feedback and suggestions, which significantly contributed to improving our project and enhancing our grasp of the subject matter.</p> 
+            </div>
+    
+            <p class="section">&nbsp;</p>
+            <div class="contact">
+                <p class="section" id="related-paper"><b>Contact Us</b></p>
+                For questions, please feel free to contact any one of us through mail:<br>
+                <ul class="people-list">
+                    <li>Yash Singholiya - <a href="mailto:b23cs1081@iitj.ac.in">b23cs1081@iitj.ac.in</a></li>
+                    <li>Sunny Kumar  - <a href="mailto:b23cs1071@iitj.ac.in">b23cs1071@iitj.ac.in</a></li>
+                    <li>Bhatt Nidhish Hiteshbhai - <a href="mailto:b23cs1009@iitj.ac.in">b23cs1009@iitj.ac.in</a></li>
+                    <li>Gaurav Subhash Vishwe - <a href="mailto:b23ee1022@iitj.ac.in">b23ee1022@iitj.ac.in</a></li>
+                    <li>Banavath Chandra Mouli Naik  - <a href="mailto:b23ee1009@iitj.ac.in">b23ee1009@iitj.ac.in</a></li>
+                </ul>
+            </div>
+     <script>
+        function prompt_on(prompt_element) {
+            prompt_element.classList.add("caption-active");
+        }
+    
+        function prompt_off(prompt_element) {
+            prompt_element.classList.remove("caption-active");
+        }
+    
+        function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+            let active_prompt = document.getElementById(active_prompt_id);
+            prompt_on(active_prompt);
+            for (let i = 0; i < inactive_prompt_ids.length; i++) {
+                let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+                prompt_off(inactive_prompt);
+            }
+    
+            let result = document.getElementById(result_id);
+            result.src = file_paths[active_prompt_id];
+        }
+     </script>
+    
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scrollToSectionLinks = document.querySelectorAll('.scrollToSection');
+            scrollToSectionLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var targetSelector = link.getAttribute('data-target');
+                    var targetSection = document.querySelector(targetSelector);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+    
+    </div></div></body></html>

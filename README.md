@@ -2,13 +2,11 @@
 
 This project aims to predict the likelihood of a person having a stroke using multiple machine learning models. The prediction is based on health and lifestyle parameters, using a real-world dataset.
 
-## 📌 Problem Statement
+##  Problem Statement
 
 Stroke is one of the leading causes of death worldwide and accounts for approximately 11% of all deaths. Early prediction can save lives by enabling timely medical interventions. This project uses pattern recognition and machine learning techniques to identify individuals at high risk of stroke.
 
 ---
-
-## 📂 Dataset
 
 - **Features**:
   - Age
@@ -25,7 +23,7 @@ Stroke is one of the leading causes of death worldwide and accounts for approxim
 
 ---
 
-## 🔧 Preprocessing
+##  Preprocessing
 
 - Handling missing values
 - Encoding categorical variables
@@ -36,7 +34,7 @@ Stroke is one of the leading causes of death worldwide and accounts for approxim
 
 ---
 
-## 🤖 Machine Learning Models Implemented
+##  Machine Learning Models Implemented
 
 | Model | With Dim. Reduction | Accuracy |
 |-------|---------------------|----------|
@@ -49,11 +47,11 @@ Stroke is one of the leading causes of death worldwide and accounts for approxim
 | Decision Tree | Varies with depth | Up to 96% |
 | Neural Network (MLP) | None | ~95.1% (but biased due to imbalance) |
 
-> ⚠️ Neural Network and Decision Tree show artificially high accuracy due to class imbalance.
+>  Neural Network and Decision Tree show artificially high accuracy due to class imbalance.
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 - Accuracy
 - Precision
@@ -65,7 +63,7 @@ All models were evaluated using an 80-20 train-test split.
 
 ---
 
-## 💡 Insights
+## Insights
 
 - **KNN (k=7)** gave the best balanced accuracy (75%) after accounting for data imbalance.
 - **Decision Tree** showed high accuracy but was biased due to overfitting on imbalanced data.
@@ -74,13 +72,9 @@ All models were evaluated using an 80-20 train-test split.
 
 ---
 
-## 🧠 Custom Model
-
-Implemented a custom **Logistic Regression** classifier with support for class weighting to handle imbalanced datasets and trained it using gradient descent.
-
 ---
 
-## 👥 Team Contributions
+##  Team Contributions
 
 | Name                        | Contribution |
 |-----------------------------|--------------|

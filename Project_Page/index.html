@@ -37,7 +37,7 @@
         <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
             <tbody>
                 <tr>
-                    <td align="center">| <a href="https://github.com/YashSingholiya/Stroke_Prediction/tree/main/Dataset">Dataset</a> | <a href="https://github.com/YashSingholiya/Stroke_Prediction">GitHub</a> | <a href="https://drive.google.com/file/d/11RGwQ5BXFuh7kwRW2_cEo1Mito5s-59K/view?usp=sharing">Report</a> | <a href="https://drive.google.com/file/d/1Zg5G1_3zQ6LxQSRjnXDOFdgKOE4mgj7n/view?usp=drive_link">Slides</a> | <a href="./resources/CSTBIR-AAAI24Slides.pdf">Web Demo</a> | <a href="#" class="scrollToSection" data-target="#videoSection">Video</a>
+                    <td align="center">| <a href="https://github.com/YashSingholiya/Stroke_Prediction/tree/main/Dataset">Dataset</a> | <a href="https://github.com/YashSingholiya/Stroke_Prediction">GitHub</a> | <a href="https://drive.google.com/file/d/1Q8c-zsayakj6_EAs6goHaSJQpHbcZHbI/view?usp=sharing">Report</a> | <a href="https://docs.google.com/presentation/d/1-WlIu_SlFIxnzBhSWdLSHPcQ6IFzeiuu/edit?usp=sharing&ouid=112741070894714543333&rtpof=true&sd=true">Slides</a> | <a href="#" class="scrollToSection" data-target="#videoSection">Video</a>
                 </tr>
             </tbody>
         </table>
@@ -46,7 +46,7 @@
             <div style="text-align: justify;text-justify: inter-word;">
             <p><span class="section"><b>Abstract</b></span> </p>
             <p>Stroke remains one of the leading causes of mortality worldwide, accounting for nearly 11% of all deaths. Early detection and prevention are crucial in mitigating its impact. This project presents a comprehensive stroke prediction system that leverages multiple machine learning models to identify individuals at high risk of stroke based on health and lifestyle parameters. The system is built using a real-world healthcare dataset containing patient attributes such as age, gender, hypertension, heart disease, marital status, work type, residence, average glucose level, BMI, and smoking status.</p>
-            <p>To enhance prediction accuracy and robustness, we implemented and compared the performance of several machine learning algorithms, including K-Nearest Neighbors (KNN), Logistic Regression, Naive Bayes, and Decision Tree Classifier. These models were evaluated using various performance metrics such as accuracy, precision, recall, and F1-score. To address the challenges of class imbalance, we employed techniques such as class weighting.</p>
+            <p>To enhance prediction accuracy and robustness, we implemented and compared the performance of several machine learning algorithms, including K-Nearest Neighbors (KNN), Logistic Regression, Naive Bayes, Decision Tree Classifier and Neural Network. These models were evaluated using various performance metrics such as accuracy, precision, recall, and F1-score. To address the challenges of class imbalance, we employed techniques such as class weighting.</p>
             <p>Furthermore, dimensionality reduction techniques were explored to improve model performance and training efficiency. Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) were used to reduce feature space while preserving essential variance and class-separating information, respectively. The impact of these techniques was analyzed by comparing model accuracy before and after transformation.</p>
             <p>Our findings highlight the effectiveness of combining classical machine learning models with dimensionality reduction strategies for early stroke prediction. The project underscores the potential of data-driven approaches in supporting preventive healthcare and aiding timely medical intervention for stroke-prone individuals.</p>
             </div>
@@ -74,57 +74,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
+                    <tr>
+                        <td>Naive Bayes</td>
+                        <td>Accuracy: 71.61%<br>Accuracy(with LDA): 61.61%</td>
+                    </tr>
+                    <tr>
+                        <td>Logistic Regression</td>
+                        <td>Accuracy(with PCA): 69.76%<br>Accuracy(with LDA): 72.79%</td>
+                    </tr>
+                    <tr>
                         <td>KNN</td>
-                        <td>RMSE: 2.912<br>MAE: 2.647<br>MAPE: 75.43%</td>
+                        <td>Accuracy: 75.25%</td>
                     </tr>
                     <tr>
-                        <td>SVM</td>
-                        <td>MSE: 0.04<br>MAE: 0.20<br>R2 Score: 0.836</td>
+                        <td>Decision Tree</td>
+                        <td>Accuracy(Varying due to depth): 0.96 to 0.91</td>
                     </tr>
                     <tr>
-                        <td>GMM</td>
-                        <td>RMSE: 3.35<br>Best Parameters: covariance_type: full, n_components: 5<br>RMSE Percentage: 74.40%<br>Confidence Scores (in percentage): [91.13075468 97.4685502 97.03453028 ... 99.99366554 95.06600285 96.78346216]</td>
+                        <td>Neural Network</td>
+                        <td>Accuracy: 95.11%</td>
                     </tr>
-                    <tr>
-                        <td>ANN</td>
-                        <td>Precision: 0.8<br>Recall: 1.0<br>MAE: 0.37</td>
-                    </tr>
-                    <tr>
-                        <td>Linear Regression</td>
-                        <td>RMSE: 1.05<br>MAE: 0.84<br>MAPE: 38.21%</td>
-                    </tr> -->
                 </tbody>
             </table>
             <br>
-            <!-- <p class="section"><b>Outputs</b></p>
-            <div style="text-align: center">
-                <div style="display: flex; justify-content: space-between;">
-                    <div style="flex-basis: 22%;">
-                    </div>
-                    <div style="flex-basis: 45%; margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between;">
-                        </div>
-                    </div>
-                    <div style="flex-basis: 22%;">
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="flex-basis: 22%; border: 1px solid black;">
-                        <img src="res/knnm.png" alt="" width="100%" style="margin: auto">
-                        <p><b>MovieName as Input(KNN)</b></p>
-                    </div>
-                    <div style="flex-basis: 22%; border: 1px solid black;">
-                        <img src="res/knnu.png" alt="" width="100%" style="margin: auto">
-                        <img src="res/svm.png" alt="" width="48%" style="margin: auto">
-                        <p><b>UserID as Input(SVR and KNN)</b></p>
-                    </div>
-                    <div style="flex-basis: 22%; border: 1px solid black;">
-                        <img src="res/ann.png" alt="" width="100%" style="margin: auto">
-                        <p><b>Feedback-Based Output(ANN).</b></p>
-                    </div>
-                </div>
-            </div> -->
             
 <p class="section">&nbsp;</p>
 
@@ -132,7 +104,7 @@
         <div id="videoSection">
             <p class="section"><b>Video Demo of Project:</b></p>
             <center>
-                <!-- <iframe width="1000" height="600" src="https://www.youtube.com/embed/D73zJuKNLNc"></iframe> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/viCMcc2javM?si=vmtG552wHnql7ASW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </center>
         </div>
     </centre>

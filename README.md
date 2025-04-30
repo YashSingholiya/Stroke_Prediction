@@ -1,4 +1,4 @@
-# 🧠 Stroke Prediction using Machine Learning
+# Stroke Prediction using Machine Learning
 
 This project aims to predict the likelihood of a person having a stroke using multiple machine learning models. The prediction is based on health and lifestyle parameters, using a real-world dataset.
 
